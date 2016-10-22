@@ -1,0 +1,978 @@
+@charset "UTF-8";
+/* CSS Document */
+/* CSS For Universal Sign-In */
+
+
+/* Global Styles */
+
+body {
+	background-color: #FBF5EA;
+	font-family:verdana,sans-serif;
+	color: #000;
+	font-size: 75%;
+	line-height: 1.5em; /* 18px vertical rhythm */
+	padding:0;
+	margin:0;
+}
+	
+.clear { 
+	clear:both; 
+	}	
+	
+	
+h1 {
+	display:block;
+	margin:0 -40px 23px -40px;
+	padding: 15px 40px 15px 40px;
+	line-height: 1em; /* 18px vertical rhythm */
+	background-color:#364395;
+	font-size:1.3333em;
+	color:#FFF;
+	border-bottom:1px solid #D4CEC4;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+}
+
+h2 {
+	margin:0 0 0.75em 0;
+	color:#364395;
+	font-size: 1.3333em; /* 16px */ 
+	line-height: 1.125em; /* 18px */ 
+	font-weight:500;
+}
+
+h3 {
+	margin:0 0 0.75em 0;
+	font-size:1.2em; /* 14px */
+	line-height: 1.2857em; /* 18px vertical rhythm */
+}
+
+h4 {
+	margin:0 0 0 0;
+	font-size:1em; /* 12px */
+	line-height: 1.5em; /* 18px vertical rhythm */
+}
+
+p {
+	margin-bottom:1em;
+	font-size:1em; /* 12px */
+	line-height: 1.5em; /* 18px vertical rhythm */
+}
+
+a.secondary {
+	font-size:0.8em;
+} /* handles the font size of secondary links, such as "don't have an email address */
+
+h2 img {
+	vertical-align:middle;
+	padding-right:5px;
+}
+
+/* Hyperlinks */
+a:link, a:visited {
+	color:#013299;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color:#2664DE;
+	text-decoration: underline;
+	outline: none;
+}
+
+a:focus {
+	text-decoration: underline;	
+	outline:#2664DE dotted 1px;
+	} /* for accessibility */
+
+/* Content Container */
+
+#content {
+	margin: 4em auto 6em auto;
+	padding: 0;
+	position:relative;
+	z-index:1;
+}
+
+/* Parent Container */
+
+#containerLogin {
+	margin:0 auto;
+	padding:0 40px 0 40px;
+	width:468px; /* base width 550px */
+	min-height:100%;
+	position:relative;
+	background-color:#FFF;
+	border:1px solid #D4CEC4;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	box-shadow: 0 6px 15px rgba(0, 0, 0, .25);
+	-moz-box-shadow: 0 6px 15px rgba(0, 0, 0, .25);
+	-webkit-box-shadow: 0 6px 15px rgba(0, 0, 0, .25);
+	z-index:1;
+}
+	
+.help {
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:72px;
+	right:40px;
+	border:none;
+}
+
+
+
+/* Customization Profile With Background Image - Sign In Box */
+
+#containerLogin.custom .help {
+	top:20px;
+	right:20px;
+}
+
+#containerLogin.custom {
+	background:#FBF5EA;
+	padding:20px;
+	width:310px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	float:right;
+	margin-right:6.5%;
+}
+
+
+
+#containerLogin.custom input[type=text], #containerLogin.custom input[type=password], #containerLogin.custom select {
+	padding:3px;
+	font-size:1.2em;
+	margin-left:0;
+	margin-bottom:0.75em;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+	border: 1px solid #E9E6EB;
+	background-color:#FFF;
+}
+
+#containerLogin.custom div.fieldContainer.remember {
+	float:left;
+	width:60%;
+}
+
+
+/* Customization Profile With Background Image With Customized Three-Line Header */
+
+#containerLogin.custom #headerText {
+	position:absolute;
+	top:1em;
+	right:375px;
+	text-align:right;
+} /* Bounding DIV for H1 */
+
+
+#containerLogin.custom h1 {
+	margin:0 0 0.75em 0;
+	padding:0;
+	color:#364395;
+	font-size: 1.3333em; /* 16px */ 
+	line-height: 1.125em; /* 18px */ 
+	font-weight:500;
+	background: none;
+	border: none;
+	border-top-left-radius: none;
+	border-top-right-radius: none;
+	-moz-border-radius-topleft: none;
+	-moz-border-radius-topright: none;
+	-webkit-border-top-left-radius: none;
+	-webkit-border-top-right-radius: none;
+} /* Only for H1 when no customized H1 text is present */
+
+#containerLogin.custom #headerText h1 {
+	margin:0;
+	padding:0;
+	background:none;
+	font-size: 3.6667em; /* 44px */ 
+	font-weight:normal;
+	color:#000;
+	border-bottom:0;
+	border-top-left-radius: none;
+	border-top-right-radius: none;
+	-moz-border-radius-topleft: none;
+	-moz-border-radius-topright: none;
+	-webkit-border-top-left-radius: none;
+	-webkit-border-top-right-radius: none;
+	width:310px;
+}/* Only for H1 when customized H1 text is present */
+
+
+#headerText span {
+	display:block;
+	font-size:55%; /* 22px */ 
+	color:#000;
+	margin:0;
+}
+
+	
+/* Customization Profile With Background Image */
+/* CSS Tricks Perfect Background Image */
+
+#marketingImage {
+        position:fixed;
+		top:-50%;
+        left:-50%;
+        min-width:200%;
+        min-height:200%;
+		z-index:-100;
+}
+
+#marketingImage img {
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        margin:auto;
+        min-width:50%;
+        min-height:50%;
+}	
+
+/* Customization Profile With Background Image Footer */
+
+#footer.marketingFooter {
+	background-color:#FCF6EA;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	padding:7px 0 7px 0;
+	border-top:1px solid #D5CEC4;
+	z-index:1;
+}
+
+#footer a {
+	color:#364395;
+}
+
+#containerLogoutText {
+	padding:0;
+	margin:0;
+	position:relative;
+}	
+
+#forgotTokenExpirationText {
+	padding:0;
+}
+	
+/* Form Elements */
+
+form {
+	padding:0;
+	position:relative;
+}
+
+form label {
+	display:block;
+	line-height:1.5em;
+	white-space:nowrap;
+}
+
+form label.inlineLabel {
+	display:inline;
+	white-space: normal;
+}
+
+.remember label {
+	display:inline;
+	font-weight:normal;
+}
+
+form input[type=text], form input[type=password], form select {
+	padding:3px;
+	font-size:1.2em;
+	margin-left:0;
+	margin-bottom:0.75em;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+	border: 1px solid #E9E6EB;
+	background-color:#FBF5EA;
+}
+
+form input[type=checkbox], form input[type=radio] {
+	margin-bottom: 0.75em;
+	vertical-align: text-top; /* FF2 Fix */
+}
+
+form input[type=text], form input[type=password], input.textInput {
+	width:98.5%;
+}
+
+form img, a img {
+	border:0;
+}
+
+input[type="checkbox"] {
+	margin-right:0.2em;
+	vertical-align:inherit;
+}	
+
+div.fieldContainer {
+	margin-bottom:1em;
+	position:relative;
+}
+
+#containerLogin fieldset {
+	margin-bottom:1em;
+	position:relative;
+	}
+
+div.fieldContainer.remember {
+	margin-bottom:5em;	
+}
+
+#containerLogin fieldset.remember {
+	margin-bottom:5em;
+	}
+
+
+
+/* === Button Core Styles === */
+
+/* --- Full size buttons --- */
+button, a.button {
+	display: block;
+	float: left;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 0;
+	color: #FFF;
+	text-shadow: 0 -1px 0 #000;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	border: none;
+	background: #364395;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, .35);
+	-moz-box-shadow: 0 2px 2px rgba(0, 0, 0, .35); 
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .35);
+	cursor: pointer;
+	padding: 2px 7px 4px 7px;
+}
+
+button img, a.button img {
+	vertical-align: middle;
+	margin-top: -5px;
+	_vertical-align: bottom; /* Shift for IE */
+}
+
+/* --- Secondary Buttons --- */
+button.secondary, a.button.secondary {
+	background: #999; 
+	color:#FFFFFF;
+	padding: 1px 4px 2px;
+	font-size: 0.85em;
+	font-weight:normal;
+	text-shadow: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+a.button.secondary {
+	box-shadow: 0 2px 2px rgba(0, 0, 0, .25);
+	-moz-box-shadow: 0 2px 2px rgba(0, 0, 0, .25);
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .25);
+}
+
+button.secondary img, a.button.secondary img {
+	margin-top: -2px;
+}
+
+/* --- Button Alternate State --- */
+button:hover, a.button:hover {
+	background-color: #006DA4;
+}
+
+button.secondary:hover, a.button.secondary:hover {
+	background-color: #666;
+}
+
+button:active, a.button:active {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .55);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .55);
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .55);
+}
+
+button.secondary:active, a.button.secondary:active {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .45);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .45);
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .45);
+}
+
+button[disabled], button[disabled]:hover button[disabled]:active {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	cursor: auto;
+}
+
+button.secondary[disabled], button.secondary[disabled]:hover, button.secondary[disabled]:active {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	cursor: auto;
+}
+
+/* FireFox2 - Border radius fix */
+button, x:-moz-any-link,
+a.button, x:-moz-any-link {
+	-moz-border-radius: 0;
+}
+
+button, x:-moz-any-link, x:default,
+a.button, x:-moz-any-link, x:default { /* restore styles for Firefox 3.0 and newer */
+	-moz-border-radius: 4px;
+}
+
+
+/* Form - Update Information */
+
+fieldset {
+	padding:0;
+	border:none;
+	clear:both;
+}
+
+
+.fieldGroup {
+	display:block;
+	margin-bottom:0.75em;
+	margin-right:10px;
+	float:left;
+}
+
+
+div.lastname {
+	margin-right:0;
+}
+
+.firstname, .lastname {
+	width:260px;
+}
+
+fieldset.citystate div.fieldGroup, fieldset.phone div.fieldGroup {
+	width:175px;
+}
+
+fieldset.citystate div.zip, fieldset.phone div.extension {
+	margin-right:0;
+	width:155px;
+}
+
+fieldset.address select {
+	display:block;
+	font-size:1em;
+}
+
+fieldset.phone select {
+	width:175px;
+	font-size:1em;
+}
+
+
+.address12 input {
+	display:block;
+	width:525px;
+	margin-bottom:0.5em;
+	clear:both;
+}
+
+a.button.next, button.btn-submit  {
+	float:right;
+}
+
+a.button.next, button.btn-submit  {
+	background-image:url(../images/buttons/arrow-right.png);
+	background-repeat:no-repeat;
+	background-position:right 5px;
+	padding-right:25px;
+	padding-left:7px;
+}
+/* Places a left-pointing arrow in the background of the submit button */
+
+
+.buttonContainer.many button {
+	margin-top:2em;
+	margin-left:10px;
+}
+
+#containerLogin.cutom button.btn-submit {
+	margin-left: 1em;
+}
+
+/* Form - Privacy Policy */
+
+div#privacypolicy {
+	height:300px;
+	overflow:scroll;
+	overflow-x:hidden; 
+	background-color:#FFF;
+	padding:10px;
+	border:1px solid #999;
+	margin-bottom:1em;
+}
+	
+.fieldGroup.agree label {
+	font-weight:normal;
+	display:inline;
+}
+
+	
+
+/* Footer */
+
+#footer {
+	clear:both;
+	margin:0 auto;
+	padding:20px 0 3em;
+	text-align:center;
+	font-size:0.97em;
+}
+
+#footer p {
+	margin:0;
+}
+
+/* Errors */
+
+p.error {
+	margin: 0 0 1em 0;
+	padding:0 0 0 30px;
+	min-height:30px;
+	background-image:url(../images/icons/alert_medium.png);
+	background-position:top left;
+	background-repeat:no-repeat;
+	color:#E72214;
+}
+
+h3.error {
+	margin: 0 0 1em 0;
+	padding:0 0 0 30px;
+	min-height:30px;
+	background-image:url(../images/icons/alert_medium.png);
+	background-position:top left;
+	background-repeat:no-repeat;
+	color:#E72214;
+}
+
+form input[type="text"].error, form input[type="password"].error, form select.error {
+	width:100%;
+	border:1px solid #900;
+	background-color:#E50000;
+	color: #FFF;
+	-webkit-animation: pulse 1s ease-in-out infinite alternate;
+}
+
+#containerLogin.custom input[type=text].error, #containerLogin.custom input[type=password].error, #containerLogin.custom select.error {
+	width:100%;
+	border:1px solid #900;
+	background-color:#E50000;
+	color: #FFF;
+	-webkit-animation: pulse 1s ease-in-out infinite alternate;
+}
+
+/* Permissions Requests */
+
+.policyContainer {
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	background-color:#EBF1FA; 
+	width:60%; 
+	margin:1% auto 5% auto; 
+	padding:0.75em 1em 1em 1em;
+}
+
+.policyContainer .policyContent {
+	background-color:#FFFFFF; 
+	padding:1em;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.policyContainer h1 {
+	padding: 0 0 0.5em 0;
+	background: none;
+	border:none;
+	margin:0;
+	text-align: center;
+	color: #646464;
+	text-shadow: none; 
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	font-weight: normal;	
+}
+
+.policyContainer h2 {
+	margin:0;
+	padding:0 0 0.75em 0;
+	background-image: none;
+}
+
+/* Content Footer and Cancel button */
+
+.contentFooter {
+	position:relative;
+	margin:40px -40px 0 -40px;
+	padding:13px 40px 15px 40px;
+	background-color:#F5F4EF;
+	border-top:1px solid #D4CEC4;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.contentFooter button {
+	float:right;
+	margin:0;
+}
+
+.contentFooter p {
+	margin:3px 0 0 0;
+	padding:0;
+	float:left;
+}
+
+p.legend {
+	float:none;
+	margin:3px 0 0 0;
+	padding:0;
+}
+
+p.legend img {
+	margin:3px 0 0 0;
+	vertical-align:top;
+	text-align:center;
+}
+
+.contentFooter a {
+	margin:0;
+	display:block;
+	min-height:18px;
+	float:left;
+}
+
+.forgot a {
+	color:#666;
+	font-size:0.9167em;
+	line-height: 1.9091em;
+}
+
+
+.contentFooter a.button {
+	color:#FFF;
+}
+
+a.cancel {
+	background:url(../images/icons/cancel.png) no-repeat left 2px;
+	padding:0 0 0 21px;
+}
+
+#containerLogin.custom .contentFooter.customized {
+	margin:0;
+}
+
+/* Modal Window */
+
+
+#modalOverlay {
+	filter: Alpha(Opacity=18);
+	opacity: 0.18;
+	width: 100%;
+	height: 100%;
+	height:expression(eval(document.documentElement.scrollTop) + 820 + "px"); /*For IE Fix*/
+	background-color: #000;
+	position: fixed;
+	z-index:500;
+	top: 0;
+	left: 0;
+}
+
+#modal {
+	background-image:url(../images/backgrounds/background_transparent_black.png);
+	background-repeat:repeat;
+	-moz-border-radius-topright: 8px;
+	-moz-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	width:530px;
+	z-index:600;
+	position:absolute;
+	top: 8%;
+	left:50%;
+	margin-left: -265px; /* Subtract half of #modal width to center */
+}
+
+#modal #modalContent {
+	margin: 10px;
+	background-color:#FFF;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	position:relative;
+	padding:1.7em 1.7em 2em 1.7em;
+}
+
+#modal a#closeModalX {
+	position:absolute;
+	width:30px;
+	height:30px;
+	top: -8px;
+	right: -8px;
+}
+
+
+#modal p.loading {
+	text-align: center;
+}
+
+#modalContent .buttonContainer {
+	text-align:center;
+	width:100%;
+	height:2.4em;
+}
+
+#modalContent .buttonContainer a { margin:.4em;}
+#modalContent .buttonContainer a#cancelConfirm { margin-left:38%; }
+#modal #modalContent .toolBar {
+	position:absolute;
+	top:0.8em;
+	right:1.7em;
+}
+
+/* Change Language */
+#changeLanguageForm select {
+	width:100%;
+	}
+
+a.changeLanguage {
+	background-position:left top;
+	background-repeat:no-repeat;
+	padding-left:20px;
+	}
+
+/* Pearson Lockup Bar */
+
+
+#webkitContainer {
+	margin:0;
+	padding:0;
+	position:relative;
+	height:48px;
+	width:100%;
+	overflow:hidden;
+	z-index:1;
+	} /* FireFox mis-handles the 0px shadow on the right side of the box-shadow, causing a horizontal scrollbar. This container fixes for FireFox and does not harm other browsers. Height is same as child plus height of shadow in pixels */
+
+
+#pearsonLockupBar {
+	margin:0;
+	position:relative;
+	height:44px;
+	background-color:#364395;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+	-moz-box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+}
+
+#pearsonLockupBar img#logo {
+	float:left;
+	width:148px;
+	}
+
+#pearsonLockupBar img#tagline {
+	float:right;
+	width:165px;
+}
+
+/* === Overrides for changing base spectrum for customization profiles === */
+
+/* Orange */
+body.spectrumOrange #pearsonLockupBar, body.spectrumOrange h1, body.spectrumOrange button, body.spectrumOrange a.button {
+	background-color: #ED6B06;
+}
+
+body.spectrumOrange h2, body.spectrumOrange #containerLogin.custom h2, body.spectrumOrange #footer a {
+	color: #ED6B06;
+}
+
+body.spectrumOrange a:focus {
+	outline-color: #F99B1C;
+	}
+
+body.spectrumOrange button:hover, body.spectrumOrange a.button:hover {
+	background-color: #F99B1C;
+}
+
+body.spectrumOrange a.changeLanguage {
+	background-image:url(../images/icons/changeLanguage-orange.png);
+	}
+
+/* Purple */
+body.spectrumPurple #pearsonLockupBar, body.spectrumPurple h1, body.spectrumPurple button, body.spectrumPurple a.button {
+	background-color: #9D1248;
+}
+
+body.spectrumPurple h2, body.spectrumPurple #containerLogin.custom h2, body.spectrumPurple #footer a {
+	color: #9D1248;
+}
+
+body.spectrumPurple a:focus {
+	outline-color: #9D1248;
+	}
+
+body.spectrumPurple button:hover, body.spectrumPurple a.button:hover {
+	background-color: #CA2F45;
+}
+
+body.spectrumPurple a.changeLanguage {
+	background-image:url(../images/icons/changeLanguage-purple.png);
+	}
+
+/* Blue */
+body.spectrumBlue #pearsonLockupBar, body.spectrumBlue h1, body.spectrumBlue button, body.spectrumBlue a.button {
+	background-color: #364395;
+}
+
+body.spectrumBlue h2, body.spectrumBlue #containerLogin.custom h2, body.spectrumBlue #footer a {
+	color: #364395;
+}
+
+body.spectrumBlue a:focus {
+	outline-color: #364395;
+	}
+
+body.spectrumBlue button:hover, body.spectrumBlue a.button:hover {
+	background-color: #006DA4;
+}
+
+body.spectrumBlue a.changeLanguage {
+	background-image:url(../images/icons/changeLanguage-blue.png);
+	}
+
+/* Green */
+body.spectrumGreen #pearsonLockupBar, body.spectrumGreen h1, body.spectrumGreen button, body.spectrumGreen a.button {
+	background-color: #008B5D;
+}
+
+body.spectrumGreen h2, body.spectrumGreen #containerLogin.custom h2, body.spectrumGreen #footer a {
+	color: #008B5D;
+}
+
+body.spectrumGreen a:focus {
+	outline-color: #008B5D;
+	}
+
+body.spectrumGreen button:hover, body.spectrumGreen a.button:hover {
+	background-color: #3FA85D;
+}
+
+body.spectrumGreen a.changeLanguage {
+	background-image:url(../images/icons/changeLanguage-green.png);
+	}
+
+
+/* Reset secondary buttons to correct hover color */
+body.spectrumOrange button.secondary:hover, body.spectrumOrange a.button.secondary:hover, body.spectrumPurple button.secondary:hover, body.spectrumPurple a.button.secondary:hover, body.spectrumGreen button.secondary:hover, body.spectrumGreen a.button.secondary:hover, body.spectrumBlue button.secondary:hover, body.spectrumBlue a.button.secondary:hover {
+	background-color:#666;
+}
+   #privacyStatement{
+	background-color:#FBF5EA;
+	padding:.5em 1em;
+	margin:.5em;
+	font:.8em arial;
+  }
+  #privacyStatement h1{
+	margin:0;
+	padding:0;
+	background:none;
+	font-size:1.3333em;
+	color:#000;
+	border:none;
+
+  }
+  #privacyStatement a:link { 
+	color:#1B3C7E;
+	text-decoration:underline;
+  }
+ 
+  #privacyStatement a:hover {
+	color:#2D6C9F;
+	text-decoration:underline;
+  } 
+ .addressContent{
+	list-style:none;
+	padding: 0;
+ }
+ .addressContent li{
+ 	text-decoration:none;
+ }
+ 
+.screen_reader_only{
+position: absolute;
+left: -999px;
+top: auto;
+width: 1px;
+height: 1px;
+overflow: hidden;
+}
+
+ #k12int{
+   background-color: #364395;
+ }
+ 
+ .logoBorder{
+	background-color:#364395;
+	width:248px;
+	height:32px;
+	padding:4px 8px;
+	border-radius:5px;
+	box-shadow: 2px 2px 2px #888888;
+
+}
+.questionMark {
+    background-color: #606363;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px #888888;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: -10px;
+    margin-top: 4px;
+    position: absolute;
+    text-align: center;
+    width: 24px;
+}
+
+.questionMark:before{
+	content:'?';
+ 	color:#fff;
+}

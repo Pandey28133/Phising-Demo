@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/* Error States CAS */
+
+.error {
+	color:#C00;
+}
+
+/* input.error */
+ 
+form input[type="text"].error, form input[type="password"].error, form input[type="emailOrUsernameform"].error, form select.error {
+	border:1px solid #900;
+	background-color:#E50000;
+	color: #FFF;
+	-webkit-animation: pulse 1s ease-in-out infinite alternate;
+}
+
+
+label.error {
+	font-weight:normal;
+	margin:-0.5em 0 1em 0;
+	white-space:normal;
+}
+
+h3.error {
+	font-weight:normal;
+	margin:0 0 0 0;
+	white-space:normal;
+    color:#C00;
+}
+
+body.spectrumBlue h3.error {
+	color: #C00;
+}
+
+h3.error a.pop {
+  color: #C00; 
+  text-decoration: underline;
+}
+
+a.error {
+	white-space:normal;
+    color:#C00;
+    text-decoration: none;
+}
+
+h3.error {
+	margin: 0 0 1em 0;
+	padding:0 0 0 30px;
+	min-height:30px;
+	background-image:url(../../media/images/icons/alert_medium.png);
+	background-position:top left;
+	background-repeat:no-repeat;
+	color:#E72214;
+}
+
+@-webkit-keyframes pulse {
+	0% { -webkit-box-shadow: 0 0 0 rgba(204, 0, 0, 0), inset 0 1px 2px rgba(0, 0, 0, .3); }
+	100% { -webkit-box-shadow: 0 3px 7px rgba(204, 0, 0, 1), inset 0 1px 2px rgba(0, 0, 0, .3); }
+}
+
+/* Email address already in use */
+
+div#emailExists {
+	font-weight:normal;
+	margin-top: -1em;
+	background-color: #F5F4EF;
+	border: 1px solid #D4CEC4;
+	border-top: none;
+	padding: 1em;
+	margin-bottom: 1em;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+}
+
+div#emailExists label.error { 
+	color: #000;
+}
+
+div#emailExists .button, div#emailExists button { margin-right: 1em; font-size:1.1em; }

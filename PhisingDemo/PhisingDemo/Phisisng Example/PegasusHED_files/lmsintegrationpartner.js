@@ -1,0 +1,1 @@
+var Pegasus=Pegasus||{};Pegasus.LMSIntegrationPartner=Pegasus.LMSIntegrationPartner||0;Pegasus.enumLMSIntegrationPartnerType={None:0,ECollege:2,CCNG:5,eText:6};Pegasus.SetLMSIntegrationPartner=function(a){Pegasus.LMSIntegrationPartner=a};
